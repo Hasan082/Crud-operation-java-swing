@@ -53,11 +53,7 @@ public final class ShowDataTable extends javax.swing.JFrame {
     }
 }
 
-    
-
-
-    
-    
+   
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -226,6 +222,7 @@ public final class ShowDataTable extends javax.swing.JFrame {
     }//GEN-LAST:event_UpdateDataActionPerformed
 
     private void deleteDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteDataActionPerformed
+        
         String deleteId = deletId.getText();
         
         if(deleteId.isEmpty()){
@@ -244,8 +241,6 @@ public final class ShowDataTable extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, deleteId + " Id Not Found!");
         }
         
-        
-       
     }//GEN-LAST:event_deleteDataActionPerformed
 
     
