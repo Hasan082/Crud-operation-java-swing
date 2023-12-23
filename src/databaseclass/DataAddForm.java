@@ -152,17 +152,17 @@ public class DataAddForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -194,6 +194,7 @@ public class DataAddForm extends javax.swing.JFrame {
         } else if(checkIfDataExist.isExist(enteredId)){
             JOptionPane.showMessageDialog(null, enteredId + " Id Already Exist");
         }else {
+            
             try(Connection conn = Connector.connectDB()) {
                 PreparedStatement ps = conn.prepareStatement("INSERT INTO datatable VALUES(?,?,?,?)");
                 ps.setString(1, id.getText());
@@ -212,6 +213,7 @@ public class DataAddForm extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_DataSubmitActionPerformed
+
 //    private boolean isExist(String entredId){
 //        try(Connection conn = Connector.connectDB()){
 //            PreparedStatement ps = conn.prepareStatement("SELECT COUNT(*) FROM datatable WHERE id=? ");
